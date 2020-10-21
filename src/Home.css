@@ -1,0 +1,31 @@
+.home__image {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6));
+  z-index: -1;
+  margin-bottom: -50px;
+}
+
+.blue__image {
+  width: 100%;
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: -1;
+  margin-bottom: -50px;
+}
+
+.home__row {
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+@media only screen and (max-width: 500px) {
+  .home__image {
+    margin-bottom: 0;
+  }
+  .blue__image {
+    margin-bottom: 0;
+  }
+}
