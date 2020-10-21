@@ -1,3 +1,6 @@
+This is a clone of the Amazon website, built using React. It is a client side app. Features include signing up/ logging in and adding items to cart, removing items from cart, product pages with zoom in capabilities and searching for items available. The design is fully responsive. 
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
