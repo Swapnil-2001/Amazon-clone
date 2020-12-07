@@ -6,7 +6,7 @@ import Checkout from './Checkout/Checkout/Checkout';
 import Login from './Login';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase/firebase';
-import SingleProduct from './SingleProduct';
+import SingleProduct from './Product/SingleProduct/SingleProduct';
 
 function App() {
   const [{ basket }, dispatch] = useStateValue();
