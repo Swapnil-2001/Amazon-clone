@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Home from './Home/Home';
 import Checkout from './Checkout/Checkout/Checkout';
@@ -9,7 +9,7 @@ import { auth } from './firebase/firebase';
 import SingleProduct from './Product/SingleProduct/SingleProduct';
 
 function App() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((authUser) => {
@@ -28,7 +28,7 @@ function App() {
     return () => {
       unsubscribe()
     }
-  }, [])
+  }, [dispatch])
 
   return (
     <Router>

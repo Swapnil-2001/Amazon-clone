@@ -6,7 +6,7 @@ import SubTotal from '../../Subtotal';
 import empty from './empty.svg';
 
 function Checkout() {
-  const [{ basket }, dispatch] = useStateValue();
+  const [{ basket }] = useStateValue();
   return (
     <div className="checkout">
       <div>
@@ -17,7 +17,7 @@ function Checkout() {
         />
         {basket?.length === 0 ? (
           <div className="empty__basket">
-            <img src={empty} className="empty__image" />
+            <img alt="empty-basket" src={empty} className="empty__image" />
             <div className="text">
               <h2 className="empty__heading">Your Amazon Basket is empty</h2>
               <p className="empty__text">To buy one or more items, click the "Add to Basket" button below the item.</p>

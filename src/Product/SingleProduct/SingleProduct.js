@@ -58,7 +58,7 @@ function SingleProduct(props) {
               {
                 Array(props.location.state.rating)
                 .fill()
-                .map(() => <p>⭐</p>)
+                .map(() => <span role="img" aria-label="stars">⭐</span>)
               }
             </div>
             <div className="stock">(In Stock)</div>
