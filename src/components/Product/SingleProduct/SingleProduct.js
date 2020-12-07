@@ -2,7 +2,7 @@ import React from 'react';
 import './SingleProduct.css';
 import ReactImageMagnify from 'react-image-magnify';
 import Header from '../../Header/Header';
-import useWindowDimensions from '../../useWindowDimensions';
+import useWindowDimensions from '../../../utils/useWindowDimensions';
 
 function SingleProduct(props) {
   const { width } = useWindowDimensions();
@@ -58,7 +58,7 @@ function SingleProduct(props) {
               {
                 Array(props.location.state.rating)
                 .fill()
-                .map(() => <p>⭐</p>)
+                .map(() => <span role="img" aria-label="stars">⭐</span>)
               }
             </div>
             <div className="stock">(In Stock)</div>

@@ -1,11 +1,11 @@
 import React from 'react';
 import './Product.css';
-import { useStateValue } from '../../StateProvider';
+import { useStateValue } from '../../../StateProvider';
 import { Link, useHistory } from 'react-router-dom';
 
 function Product({ id, title, image, price, rating, link }) {
   const history = useHistory();
-  const [ { basket, user }, dispatch ] = useStateValue();
+  const [ { user }, dispatch ] = useStateValue();
   const redirect = () => {
     history.push('/login');
   }
@@ -34,7 +34,7 @@ function Product({ id, title, image, price, rating, link }) {
           {
             Array(rating)
             .fill()
-            .map(() => <p className="stars">⭐</p>)
+            .map(() => <span role="img" className="stars" aria-label="stars">⭐</span>)
           }
         </div>
       </div>
