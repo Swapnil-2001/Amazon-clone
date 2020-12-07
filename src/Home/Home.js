@@ -1,15 +1,15 @@
 import React from 'react';
 import './Home.css';
-import Header from './Header';
-import Items from './Items';
+import Header from '../Header/Header';
+import Items from '../Items';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Banner1 from './Banner1.jpeg';
-import Banner2 from './Banner2.jpg';
-import Banner3 from './Banner3.jpg';
-import Banner4 from './Banner4.jpg';
-import { useStateValue } from './StateProvider';
+import Banner1 from '../images/Banner1.jpeg';
+import Banner2 from '../images/Banner2.jpg';
+import Banner3 from '../images/Banner3.jpg';
+import Banner4 from '../images/Banner4.jpg';
+import { useStateValue } from '../StateProvider';
 
 function Home() {
   const [{ search }] = useStateValue();
