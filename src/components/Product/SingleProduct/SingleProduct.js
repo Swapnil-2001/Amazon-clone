@@ -2,7 +2,7 @@ import React from 'react';
 import './SingleProduct.css';
 import ReactImageMagnify from 'react-image-magnify';
 import Header from '../../Header/Header';
-import useWindowDimensions from '../../utils/useWindowDimensions';
+import useWindowDimensions from '../../../utils/useWindowDimensions';
 
 function SingleProduct(props) {
   const { width } = useWindowDimensions();
