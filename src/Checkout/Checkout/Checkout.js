@@ -2,7 +2,7 @@ import React from 'react';
 import { useStateValue } from '../../StateProvider';
 import './Checkout.css';
 import CheckoutProduct from '../CheckoutProduct/CheckoutProduct';
-import SubTotal from '../../Subtotal';
+import SubTotal from '../../Subtotal/Subtotal';
 import empty from './empty.svg';
 
 function Checkout() {

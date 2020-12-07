@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from './Header/Header';
 import Home from './Home/Home';
 import Checkout from './Checkout/Checkout/Checkout';
-import Login from './Login';
+import Login from './Login/Login';
 import { useStateValue } from './StateProvider';
 import { auth } from './firebase/firebase';
 import SingleProduct from './Product/SingleProduct/SingleProduct';
