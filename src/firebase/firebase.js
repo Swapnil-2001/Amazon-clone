@@ -1,5 +1,6 @@
 import firebase from "firebase";
 
+// For accessing Firestore 
 const firebaseApp = firebase.initializeApp({
   apiKey: "AIzaSyB915izA6FPA18Eyigl8WM1LyhPTNzOhoc",
   authDomain: "clone-cafe3.firebaseapp.com",
@@ -11,6 +12,7 @@ const firebaseApp = firebase.initializeApp({
   measurementId: "G-E9XKJ5V5X5"
 });
 
+// For Firebase authentication
 const auth = firebase.auth();
 
 export { auth };
