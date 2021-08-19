@@ -7,6 +7,9 @@
   text-align: center;
   color: red;
 }
+.checked {
+  color: orange;
+}
 .singleProduct {
   margin-top: 0;
   display: flex;

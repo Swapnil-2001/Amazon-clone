@@ -36,6 +36,7 @@
 
 .header__nav {
   display: flex;
+  margin-left: auto;
   justify-content: space-evenly;
 }
 

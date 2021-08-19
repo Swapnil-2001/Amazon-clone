@@ -2,7 +2,6 @@
 export const initialState = {
   basket: [],
   user: null,
-  search: ''
 };
 
 export const getBasketTotal = (basket) =>
@@ -11,42 +10,35 @@ export const getBasketTotal = (basket) =>
 // state is anything inside the data layer
 // actions used for manipulating the state, i.e. add to basket
 const reducer = (state, action) => {
-  switch(action.type) {
-    case 'SET_USER':
+  switch (action.type) {
+    case "SET_USER":
       if (!action.user) {
         return initialState;
       } else {
         return {
           ...state,
-          user: action.user
-        }
+          user: action.user,
+        };
       }
-    case 'SET_INPUT':
+    case "ADD_TO_BASKET":
       return {
         ...state,
-        search: action.item
-      }
-    case 'ADD_TO_BASKET':
-      return {
-        ...state,
-        basket: [...state.basket, action.item]
+        basket: [...state.basket, action.item],
       };
-    case 'REMOVE_FROM_BASKET':
+    case "REMOVE_FROM_BASKET":
       let newBasket = [...state.basket];
       const index = state.basket.findIndex(
         (basketItem) => basketItem.id === action.id
       );
-      if(index >= 0) {
+      if (index >= 0) {
         newBasket.splice(index, 1);
       } else {
-        console.warn(
-          `Cannot remove product (id: ${action.id})`
-        );
+        console.warn(`Cannot remove product (id: ${action.id})`);
       }
-      return {...state, basket: newBasket};
+      return { ...state, basket: newBasket };
     default:
       return state;
   }
-}
+};
 
 export default reducer;

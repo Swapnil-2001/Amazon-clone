@@ -1,4 +1,4 @@
-.home__image {
+.carousel__image {
   width: 100%;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0.6));
   z-index: -1;
@@ -6,10 +6,7 @@
 }
 
 .blue__image {
-  width: 100%;
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
-  z-index: -1;
-  margin-bottom: -50px;
 }
 
 .home__row {

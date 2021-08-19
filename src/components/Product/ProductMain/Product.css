@@ -6,15 +6,14 @@
   min-height: 200px;
   overflow: hidden;
   width: 30%;
-  margin: 10px;
+  margin: 20px 10px;
   z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: white;
 }
 
-.product__rating {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
+.checked {
+  color: orange;
 }
 
 .product__info {
@@ -49,6 +48,12 @@
   padding: 5px;
   border-color: #a88734 #9c7e31 #846a29;
   margin: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.product > button:hover {
+  transform: scale(1.1);
 }
 
 @media only screen and (max-width: 450px) {
