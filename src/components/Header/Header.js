@@ -24,14 +24,17 @@ function Header({ search, setSearch }) {
           alt="Amazon logo"
         />
       </Link>
-      <div className="header__search">
-        <input
-          className="header__searchInput"
-          onChange={handleChange}
-          value={search}
-        />
-        <SearchIcon className="header__searchIcon" />
-      </div>
+      {setSearch && (
+        <div className="header__search">
+          <input
+            className="header__searchInput"
+            onChange={handleChange}
+            value={search}
+          />
+          <SearchIcon className="header__searchIcon" />
+        </div>
+      )}
+
       <div className="header__nav">
         <Link to={!user && "/login"} className="header__link">
           <div onClick={login} className="header__option">

@@ -32,16 +32,32 @@ function Home() {
       <div className="home">
         <Slider {...settings}>
           <div>
-            <img src={Banner1} alt="Jack Ryan" className="home__image" />
+            <img
+              src={Banner1}
+              alt="Amazon Products"
+              className="carousel__image"
+            />
           </div>
           <div>
-            <img src={Banner2} alt="Jack Ryan" className="home__image" />
+            <img
+              src={Banner2}
+              alt="Amazon Products"
+              className="carousel__image"
+            />
           </div>
           <div>
-            <img src={Banner3} alt="banner" className="blue__image" />
+            <img
+              src={Banner3}
+              alt="Amazon Products"
+              className="carousel__image blue_image"
+            />
           </div>
           <div>
-            <img src={Banner4} alt="banner" className="blue__image" />
+            <img
+              src={Banner4}
+              alt="Amazon Products"
+              className="carousel__image blue_image"
+            />
           </div>
         </Slider>
         <div className="home__row">
