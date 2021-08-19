@@ -3,15 +3,15 @@ import "./Login.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "../../firebase/firebase";
 
-function Login() {
+function SignUp() {
   const history = useHistory();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const login = (event) => {
+  const register = (event) => {
     event.preventDefault();
     auth
-      .signInWithEmailAndPassword(email, password)
+      .createUserWithEmailAndPassword(email, password)
       .then((auth) => {
         history.push("/");
       })
@@ -28,7 +28,7 @@ function Login() {
         />
       </Link>
       <div className="login__container">
-        <h1>Sign In</h1>
+        <h1>Sign Up</h1>
         <form>
           <h5>E-mail</h5>
           <input
@@ -42,22 +42,17 @@ function Login() {
             onChange={(event) => setPassword(event.target.value)}
             type="password"
           />
-          <button onClick={login} type="submit" className="login__signInButton">
-            Login
-          </button>
           <p>
             By continuing, you agree to Amazon's Conditions of Use and Privacy
             Notice.
           </p>
-          <Link to="/signup">
-            <button className="login__registerButton">
-              Register as New User
-            </button>
-          </Link>
+          <button onClick={register} className="login__signInButton">
+            Create your Amazon Account
+          </button>
         </form>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default SignUp;
